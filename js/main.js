@@ -1,6 +1,6 @@
 
 
-document.getElementById("Layer_11").style.opacity = 1
+document.getElementById("curlew").style.opacity = 0
 
 
 

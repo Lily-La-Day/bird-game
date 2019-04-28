@@ -1,0 +1,57 @@
+html {
+
+}
+body {
+background-color: white;
+  font-size: 12pt;
+
+}
+
+header {
+display: grid;
+height: 250px;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 200px 1fr;
+
+grid-template-areas:
+"title-area title-area title-area"
+"nav-one nav-two nav-three";
+  margin: 0;
+  width: 100%;
+justify-items: center;
+
+
+}
+
+ .title {
+  grid-area: title-area;
+  color: white;
+  font-size: 5em;
+  font-family: 'Monoton';
+  font-weight: 5;
+  letter-spacing: 0.2em;
+  word-spacing: 0.5em;
+  align-self: center;
+
+}
+
+#cuckoo-word{
+  font-size: 10;
+
+}
+
+
+
+a.HeaderLink1 {
+  align-self: center;
+  font-family: 'Lekton';
+  font-size: 1em;
+  text-decoration: none;
+  color: white;
+  grid-area: nav-two;
+  justify-self: center;
+};
+
+#test {
+  background-color: 'blue';
+}
