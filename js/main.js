@@ -1,6 +1,6 @@
 
 
-document.getElementById("curlew").style.opacity = 0
+document.getElementById("curlew").style.opacity = 1
 
 
 
