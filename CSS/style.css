@@ -1,13 +1,20 @@
 html {
 height: 100%;
 }
-body {
+main {
+  background-repeat: no-repeat;
+  background-position: center;
 
-
+background-image: url("https://i.ibb.co/8c0hYkj/cracks.jpg")
 
 }
 
+
 .bird-grid {
+  background-repeat: no-repeat;
+  background-position: center;
+
+background-image: url("https://i.ibb.co/8c0hYkj/cracks.jpg")
   justify-content: space-around;
 display: grid;
 justify-content: center;
@@ -23,8 +30,10 @@ grid-template-rows: repeat(8, 10em);
 }
 
 [class*="bird-image"] {
-  fill: black;
   
+ max-width: 8em;
+ max-height: 8em;
+
 }
 
 
@@ -32,7 +41,7 @@ grid-template-rows: repeat(8, 10em);
 .bird-image-nightingale {
 display: grid;
 grid-area: 2/3;
-width: 8em;
+
 
 
 
@@ -40,15 +49,15 @@ width: 8em;
 
 .bird-image-blackbird {
 display: grid;
-grid-area: 1/3;
+grid-area: 2/4;
 
-width: 5em;
+
 }
 .bird-image-buzzard {
 
   display: grid;
   grid-area: 1/4;
-  height: 7em;
+
 
 
 }
@@ -56,46 +65,48 @@ width: 5em;
 
 display: grid;
 grid-area: 1/5;
-width: 5em;
+
 align-self: flex-end;
 
 }
 .bird-image-cuckoo {
 display: grid;
   grid-area: 7/6;
-  width: 5em;
+
   transform: scaleX(-1);
 
 }
 .bird-image-curlew {
 display: grid;
-grid-area: 7/2;
-width: 5em;
+grid-area: 6/3;
+justify-self: center;
 
 }
 .bird-image-green-woodpecker {
 display: grid;
-grid-area: 2/6;
-height: 5em;
+grid-area: 2/5;
+justify-self: flex-end;
+
 
 transform: scaleX(-1);
 }
 .bird-image-lapwing {
 display: grid;
-grid-area: 3/7;
-width: 5em;
+grid-area: 3/6;
+
+
 }
 .bird-image-little-owl {
 display: grid;
 grid-area: 3/3;
-width: 5em;
+
 justify-self: flex-end;
 
 }
 .bird-image-nightjar {
 display: grid;
 grid-area: 1/6;
-width: 5em;
+
 justify-self: flex-end;
 align-self: flex-end;
 }
@@ -103,7 +114,7 @@ align-self: flex-end;
 
 display: grid;
 grid-area: 4/2;
-height: 5em;
+justify-self: flex-end;
 transform: scaleX(-1);
 
 
@@ -112,39 +123,38 @@ transform: scaleX(-1);
 }
 .bird-image-rook {
 display: grid;
-grid-area: 4/7;
-width: 5em;
+grid-area: 4/6;
 
 
 }
 .bird-image-skylark {
 display: grid;
 grid-area: 5/2;
-width: 5em;
+
 
 }
 .bird-image-sparrowhawk {
 display: grid;
 grid-area: 5/7;
-width: 5em;
+
 transform: scaleX(-1);
 }
 .bird-image-starling {
 display: grid;
 grid-area: 6/2;
-width: 5em;
+
 transform: scaleX(-1);
 
 }
 .bird-image-swift {
 display: grid;
 grid-area: 6/7;
-width: 5em;
+
 transform: scaleX(-1);
 }
 .bird-image-tawny-owl {
 display: grid;
-grid-area: 2/2;
+grid-area: 4/3;
 height: 5em;
 justify-self: flex-end;
 align-self: flex-end;
@@ -154,27 +164,27 @@ align-self: flex-end;
 .bird-image-woodpigeon {
 display: grid;
 grid-area: 7/3;
-width: 5em;
+
 
 
 }
 .bird-image-wren {
 display: grid;
 grid-area: 7/4;
-width: 5em;
+
 align-self: flex-end;
 }
 .bird-image-yellowhammer {
 display: grid;
-grid-area: 7/5;
-width: 5em;
-align-self: flex-end;
+grid-area: 8/5;
+
+align-self: flex-start;
 }
 
 .bird-image-marsh-warbler {
   display: grid;
-  grid-area: 7/7;
-  width: 10em;
+  grid-area: 6/6;
+
   justify-self: flex-start;
 }
 
