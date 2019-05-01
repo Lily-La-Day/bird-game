@@ -30,16 +30,40 @@
 //}
 //testFunction()
 
+const birdSongArray = [new Audio("bird-sounds/cuckoo-sound.mp3"),
+ new Audio("bird-sounds/lapwing-sound.mp3")]
+
+
+
 const handleBirdClick = function(event) {
 	let birdWordTest = new RegExp("image")
-	const parentElement = event.target.parentElement;
-	console.log(parentElement.id)
-	if (birdWordTest.test(parentElement.id)) {
+	const parentElement = event.target.parentElement.id
+	const justBirdWord = parentElement.split('-')[0];
+	//console.log(justBirdWord)
+//console.log(birdWordTest.test(parentElement))
+	if (birdWordTest.test(parentElement)) {
 
-		
+for(i=0;i<birdSongArray.length;i++) {
+	let birdMatch = new RegExp(justBirdWord)
+let sourceString = birdSongArray[i].src
+console.log(birdMatch)
+//console.log(sourceString)
+//console.log(birdMatch)
+if (birdMatch.test(sourceString)) {
+	console.log(birdSongArray[i])
+	let audio = birdSongArray[i]
+	const playAudio = () => {
+			audio.play()
+		}
+		playAudio()
 	}
-}
 
+}
+	//console.log(birdSongArray[i].src.test(birdMatch))
+
+
+}
+}
 document.addEventListener("click", handleBirdClick)
 
 /*const clickToPlay = () =>{
