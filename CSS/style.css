@@ -30,7 +30,7 @@ grid-template-rows: repeat(8, 10em);
 }
 
 [class*="bird-image"] {
-  
+
  max-width: 8em;
  max-height: 8em;
 
@@ -82,7 +82,7 @@ grid-area: 6/3;
 justify-self: center;
 
 }
-.bird-image-green-woodpecker {
+.bird-image-greenwoodpecker {
 display: grid;
 grid-area: 2/5;
 justify-self: flex-end;
@@ -96,7 +96,7 @@ grid-area: 3/6;
 
 
 }
-.bird-image-little-owl {
+.bird-image-littleowl {
 display: grid;
 grid-area: 3/3;
 
@@ -152,7 +152,7 @@ grid-area: 6/7;
 
 transform: scaleX(-1);
 }
-.bird-image-tawny-owl {
+.bird-image-tawnyowl {
 display: grid;
 grid-area: 4/3;
 height: 5em;
@@ -181,7 +181,7 @@ grid-area: 8/5;
 align-self: flex-start;
 }
 
-.bird-image-marsh-warbler {
+.bird-image-marshwarbler {
   display: grid;
   grid-area: 6/6;
 

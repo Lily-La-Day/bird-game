@@ -30,41 +30,146 @@
 //}
 //testFunction()
 
-const birdSongArray = [new Audio("bird-sounds/cuckoo-sound.mp3"),
- new Audio("bird-sounds/lapwing-sound.mp3")]
+const birdSongArray = [
+new Audio("bird-sounds/blackbird-sound.mp3"),
+ new Audio("bird-sounds/buzzard-sound.mp3"),
+ new Audio("bird-sounds/chiffchaff-sound.mp3"),
+ new Audio("bird-sounds/cuckoo-sound.mp3"),
+ new Audio("bird-sounds/curlew-sound.mp3"),
+ new Audio("bird-sounds/greenwoodpecker-sound.mp3"),
+ new Audio("bird-sounds/lapwing-sound.mp3"),
+  new Audio("bird-sounds/littleowl-sound.mp3"),
+	 new Audio("bird-sounds/marshwarbler-sound.mp3"),
+	  new Audio("bird-sounds/nightingale-sound.mp3"),
+		 new Audio("bird-sounds/nightjar-sound.mp3"),
+		  new Audio("bird-sounds/pheasant-sound.mp3"),
+			 new Audio("bird-sounds/rook-sound.mp3"),
+			  new Audio("bird-sounds/skylark-sound.mp3"),
+				 new Audio("bird-sounds/sparrowhawk-sound.mp3"),
+				  new Audio("bird-sounds/starling-sound.mp3"),
+					 new Audio("bird-sounds/swift-sound.mp3"),
+					  new Audio("bird-sounds/tawny-owl-sound.mp3"),
+						 new Audio("bird-sounds/woodpigeon-sound.mp3"),
+						  new Audio("bird-sounds/wren-sound.mp3"),
+							 new Audio("bird-sounds/yellowhammer-sound.mp3"),
+						 ]
 
-
+	let songAndName = []
 
 const handleBirdClick = function(event) {
+  let fragmentTest = new RegExp("fragment")
 	let birdWordTest = new RegExp("image")
-	const parentElement = event.target.parentElement.id
-	const justBirdWord = parentElement.split('-')[0];
-	//console.log(justBirdWord)
-//console.log(birdWordTest.test(parentElement))
-	if (birdWordTest.test(parentElement)) {
+let parentElement = event.target.parentElement.id
+	const firstWord = parentElement.split('-')[0];
+const secondWord = parentElement.split('-')[1]
+		let birdMatch = new RegExp(firstWord)
+		let soundMatch = new RegExp(secondWord)
 
-for(i=0;i<birdSongArray.length;i++) {
-	let birdMatch = new RegExp(justBirdWord)
-let sourceString = birdSongArray[i].src
-console.log(birdMatch)
-//console.log(sourceString)
+if (fragmentTest.test(parentElement)) {
+songAndName.push(firstWord)
+songAndName.push(secondWord)
+console.log(songAndName)
+}
+if ((songAndName.length ===3) && (songAndName[2] === 'fragment'))  {
+
+		if (songAndName[0]===songAndName[1]){
+			let clickedId = songAndName[0] + '-fragment'
+
+			document.getElementById(clickedId).style.opacity = 0;
+			songAndName=[]
+		}
+
+}//console.log(birdWordTest.test(parentElement))
+	if (birdWordTest.test(parentElement)) {
 //console.log(birdMatch)
+for(i=0;i<birdSongArray.length;i++) {
+//	let birdMatch = new RegExp(justBirdWord)
+let sourceString = birdSongArray[i].src
+
+//console.log(sourceString)
+
 if (birdMatch.test(sourceString)) {
 	console.log(birdSongArray[i])
 	let audio = birdSongArray[i]
 	const playAudio = () => {
 			audio.play()
-		}
-		playAudio()
-	}
+			songAndName.push(firstWord)
+			console.log(songAndName.length)
+			console.log(songAndName)
+
 
 }
+   playAudio()
+
+
+}
+
+		}
+
+
+}
+}
+
+
+/*
+const fragmentFunction = () => {
+if (fragmentTest.test(parentElement)) {
+console.log('fragment')
+songAndName.push(soundMatch)
+if ((songAndName.length ===2) && (songAndName[1] === 'fragment'))  {
+ console.log('is it a match?')
+console.log(songAndName)
+}
+
+}
+fragmentFunction()
+
+if ((songAndName.length ===1) && (secondWord===firstWord)) {
+	songAndName.push(secondWord)
+	console.log(songAndName)*/
+
+
+document.addEventListener("click", handleBirdClick)
+
+/*const matchToUse = handleBirdClick()
+const birdSongMatch = function(eventtwo) {
+
+	let parentElement = eventtwo.target.parentElement;
+	const birdFragmentId = eventtwo.target.parentElement.id;
+const birdFragmentWord = birdFragmentId.split('-')[0]
+if(matchToUse === birdMatch) {
+	console.log('yes')
+}
+	if (justBirdWord === birdFragmentWord) {
+		document.birdFragment.style.opacity = 0;
+	}
+}*/
+
+//document.addEventListener('click', birdSongMatch)
+/*const birdSongMatch = function(event) {
+	const birdFragment = event.target.birdFragment;
+	const birdFragmentId = event.target.birdFragment.id;
+	const birdFragmentWord = parentElement.split('-')[0]
+	if (justBirdWord === birdFragmentWord) {
+		document.birdFragment.style.opacity = 0;
+	}
+}*/
+
+//const birdSongMatch = (event) => {
+	//const birdFragment = event.target.parentElement;
+	//const birdFragmentId = event.target.parentElement.id;
+	//const birdFragmentWord = parentElement.split('-')[0]
+	//if (justBirdWord === birdFragmentWord) {
+	//	document.birdFragment.style.opacity = 0;
+	//}
+//}
 	//console.log(birdSongArray[i].src.test(birdMatch))
 
 
-}
-}
-document.addEventListener("click", handleBirdClick)
+
+
+
+
 
 /*const clickToPlay = () =>{
 
