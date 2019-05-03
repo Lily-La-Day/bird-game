@@ -86,6 +86,12 @@ if ((songAndName.length ===3) && (songAndName[2] === 'fragment'))  {
 
 } else if ((songAndName.length ===3) && (songAndName[2] !== 'fragment')) {
 	songAndName.length = 0
+	console.log(songAndName)
+} else if((songAndName.length > 3)){
+	songAndName.length = 0
+	console.log(songAndName)
+} else if (songAndName[1]==='fragment'){
+	songAndName.length = 0
 }
 //console.log(birdWordTest.test(parentElement))
 	if ((songAndName.length===0) && (birdWordTest.test(parentElement))) {
