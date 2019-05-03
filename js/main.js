@@ -30,6 +30,29 @@
 //}
 //testFunction()
 
+const colorChange = function() {
+var r = Math.floor(Math.random()*256);
+var g = Math.floor(Math.random()*256);
+var b = Math.floor(Math.random()*256);
+var rgb = 'rgb(' + r + ',' + g + ',' + b + ')';
+
+  return rgb;
+}
+
+const colorChangeFunction = function() {
+var r = Math.floor(Math.random()*256);
+var g = Math.floor(Math.random()*256);
+var b = Math.floor(Math.random()*256);
+var rgb = 'rgb(' + r + ',' + g + ',' + b + ')';
+
+    event.target.style.backgroundColor = rgb;
+}
+
+const removeColor = function() {
+	event.target.style.fill = 'black';
+}
+
+
 const birdSongArray = [
 new Audio("bird-sounds/blackbird-sound.mp3"),
  new Audio("bird-sounds/buzzard-sound.mp3"),
@@ -65,6 +88,34 @@ let parentElement = event.target.parentElement.id
 const secondWord = parentElement.split('-')[1]
 		let birdMatch = new RegExp(firstWord)
 		let soundMatch = new RegExp(secondWord)
+		if ((songAndName.length===0) && (birdWordTest.test(parentElement))) {
+			let clickedBird = firstWord + '-image'
+document.getElementById(clickedBird).style.fill = colorChange();
+		//console.log(birdMatch)
+	for(i=0;i<birdSongArray.length;i++) {
+		let audio = birdSongArray[i]
+	//	let birdMatch = new RegExp(justBirdWord)
+	let sourceString = birdSongArray[i].src
+	//console.log(sourceString)
+	if ((birdMatch.test(sourceString)||(soundMatch.test('fragment')))) {
+	//console.log(soundMatch.test('fragment'))
+		//console.log(audio)
+		//console.log(singing)
+		const playAudio = () => {
+  songAndName.push(firstWord)
+				if (songAndName.length===1){
+         audio.play()
+
+				//console.log(songAndName.length)
+				console.log(songAndName)
+			}
+
+			}
+			playAudio()
+		}
+
+	}
+}
 
 if (fragmentTest.test(parentElement)) {
 	console.log(parentElement)
@@ -73,15 +124,21 @@ songAndName.push(secondWord)
 console.log(songAndName)
 }
 if ((songAndName.length ===3) && (songAndName[2] === 'fragment'))  {
-
+let clickedBird = songAndName[0] + '-image'
 		if (songAndName[0]===songAndName[1]){
 			let clickedId = songAndName[0] + '-fragment'
+			//let clickedBird =  songAndName[0] + '-image'
       document.getElementById(clickedId).style.opacity = 0;
+			document.getElementById(clickedBird).style.fill = colorChange();
+
+			console.log(clickedBird)
 			songAndName.length=0
 			console.log(songAndName)
 } else if (songAndName[0]!==songAndName[1]){
 	songAndName.length=0
+  document.getElementById(clickedBird).style.fill = 'black';
 	console.log(songAndName)
+
 }
 
 } else if ((songAndName.length ===3) && (songAndName[2] !== 'fragment')) {
@@ -94,8 +151,9 @@ if ((songAndName.length ===3) && (songAndName[2] === 'fragment'))  {
 	songAndName.length = 0
 }
 //console.log(birdWordTest.test(parentElement))
-	if ((songAndName.length===0) && (birdWordTest.test(parentElement))) {
-//console.log(birdMatch)
+/*	if ((songAndName.length===0) && (birdWordTest.test(parentElement))) {
+		colorChange();
+	//console.log(birdMatch)
 for(i=0;i<birdSongArray.length;i++) {
 	let audio = birdSongArray[i]
 //	let birdMatch = new RegExp(justBirdWord)
@@ -114,9 +172,8 @@ songAndName.push(firstWord)
 
 			//console.log(songAndName.length)
 			console.log(songAndName)
-		} else if (songAndName.length > 1) {
-				audio.pause()
-			}
+		}
+
 		}
 		playAudio()
 	}
@@ -124,7 +181,7 @@ songAndName.push(firstWord)
 }
 
 
-}
+}*/
 
 
 	}
