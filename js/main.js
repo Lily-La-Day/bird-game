@@ -67,6 +67,7 @@ const secondWord = parentElement.split('-')[1]
 		let soundMatch = new RegExp(secondWord)
 
 if (fragmentTest.test(parentElement)) {
+	console.log(parentElement)
 songAndName.push(firstWord)
 songAndName.push(secondWord)
 console.log(songAndName)
@@ -75,15 +76,19 @@ if ((songAndName.length ===3) && (songAndName[2] === 'fragment'))  {
 
 		if (songAndName[0]===songAndName[1]){
 			let clickedId = songAndName[0] + '-fragment'
+      document.getElementById(clickedId).style.opacity = 0;
+			songAndName.length=0
+			console.log(songAndName)
+} else if (songAndName[0]!==songAndName[1]){
+	songAndName.length=0
+	console.log(songAndName)
+}
 
-			document.getElementById(clickedId).style.opacity = 0;
-			songAndName=[]
-
-
-		}
-
-}//console.log(birdWordTest.test(parentElement))
-	if (birdWordTest.test(parentElement)) {
+} else if ((songAndName.length ===3) && (songAndName[2] !== 'fragment')) {
+	songAndName.length = 0
+}
+//console.log(birdWordTest.test(parentElement))
+	if ((songAndName.length===0) && (birdWordTest.test(parentElement))) {
 //console.log(birdMatch)
 for(i=0;i<birdSongArray.length;i++) {
 	let audio = birdSongArray[i]
@@ -91,9 +96,9 @@ for(i=0;i<birdSongArray.length;i++) {
 let sourceString = birdSongArray[i].src
 //console.log(sourceString)
 if ((birdMatch.test(sourceString)||(soundMatch.test('fragment')))) {
-console.log(soundMatch.test('fragment'))
-	console.log(audio)
-	console.log(singing)
+//console.log(soundMatch.test('fragment'))
+	//console.log(audio)
+	//console.log(singing)
 	const playAudio = () => {
 
 songAndName.push(firstWord)
@@ -135,10 +140,8 @@ if ((songAndName.length ===2) && (songAndName[1] === 'fragment'))  {
  console.log('is it a match?')
 console.log(songAndName)
 }
-
 }
 fragmentFunction()
-
 if ((songAndName.length ===1) && (secondWord===firstWord)) {
 	songAndName.push(secondWord)
 	console.log(songAndName)*/
