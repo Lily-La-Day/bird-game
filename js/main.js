@@ -9,7 +9,7 @@
 //bird.addEventListener('click', playAudio)
 
  //const testFunction = () => {
-//let audio = new Audio("bird-sounds/lapwing-sound.mp3" )
+//let audio = new Audio("bird-sounds/lapwing-sound.m4a" )
 //const playAudio = () => {
 	//	audio.play()
 	//}
@@ -54,27 +54,27 @@ const removeColor = function() {
 
 
 const birdSongArray = [
-new Audio("bird-sounds/blackbird-sound.mp3"),
- new Audio("bird-sounds/buzzard-sound.mp3"),
- new Audio("bird-sounds/chiffchaff-sound.mp3"),
- new Audio("bird-sounds/cuckoo-sound.mp3"),
- new Audio("bird-sounds/curlew-sound.mp3"),
- new Audio("bird-sounds/greenwoodpecker-sound.mp3"),
- new Audio("bird-sounds/lapwing-sound.mp3"),
-  new Audio("bird-sounds/littleowl-sound.mp3"),
-	 new Audio("bird-sounds/marshwarbler-sound.mp3"),
-	  new Audio("bird-sounds/nightingale-sound.mp3"),
-		 new Audio("bird-sounds/nightjar-sound.mp3"),
-		  new Audio("bird-sounds/pheasant-sound.mp3"),
-			 new Audio("bird-sounds/rook-sound.mp3"),
-			  new Audio("bird-sounds/skylark-sound.mp3"),
-				 new Audio("bird-sounds/sparrowhawk-sound.mp3"),
-				  new Audio("bird-sounds/starling-sound.mp3"),
-					 new Audio("bird-sounds/swift-sound.mp3"),
-					  new Audio("bird-sounds/tawnyowl-sound.mp3"),
-						 new Audio("bird-sounds/woodpigeon-sound.mp3"),
-						  new Audio("bird-sounds/wren-sound.mp3"),
-							 new Audio("bird-sounds/yellowhammer-sound.mp3"),
+new Audio("bird-sounds/blackbird-sound.m4a"),
+ new Audio("bird-sounds/buzzard-sound.m4a"),
+ new Audio("bird-sounds/chiffchaff-sound.m4a"),
+ new Audio("bird-sounds/cuckoo-sound.m4a"),
+ new Audio("bird-sounds/curlew-sound.m4a"),
+ new Audio("bird-sounds/greenwoodpecker-sound.m4a"),
+ new Audio("bird-sounds/lapwing-sound.m4a"),
+  new Audio("bird-sounds/littleowl-sound.m4a"),
+	 new Audio("bird-sounds/marshwarbler-sound.m4a"),
+	  new Audio("bird-sounds/nightingale-sound.m4a"),
+		 new Audio("bird-sounds/nightjar-sound.m4a"),
+		  new Audio("bird-sounds/pheasant-sound.m4a"),
+			 new Audio("bird-sounds/rook-sound.m4a"),
+			  new Audio("bird-sounds/skylark-sound.m4a"),
+				 new Audio("bird-sounds/sparrowhawk-sound.m4a"),
+				  new Audio("bird-sounds/starling-sound.m4a"),
+					 new Audio("bird-sounds/swift-sound.m4a"),
+					  new Audio("bird-sounds/tawnyowl-sound.m4a"),
+						 new Audio("bird-sounds/woodpigeon-sound.m4a"),
+						  new Audio("bird-sounds/wren-sound.m4a"),
+							 new Audio("bird-sounds/yellowhammer-sound.m4a"),
 						 ]
 
 	let songAndName = []
@@ -94,28 +94,38 @@ document.getElementById(clickedBird).style.fill = colorChange();
 		//console.log(birdMatch)
 	for(i=0;i<birdSongArray.length;i++) {
 		let audio = birdSongArray[i]
+		const pauseAudio = () => {
+			audio.pause()
+		}
+		const playAudio = () => {
+			audio.play()
+		}
 	//	let birdMatch = new RegExp(justBirdWord)
 	let sourceString = birdSongArray[i].src
 	//console.log(sourceString)
-	if ((birdMatch.test(sourceString)||(soundMatch.test('fragment')))) {
+	if (birdMatch.test(sourceString)) {
 	//console.log(soundMatch.test('fragment'))
 		//console.log(audio)
 		//console.log(singing)
-		const playAudio = () => {
-  songAndName.push(firstWord)
-				if (songAndName.length===1){
-         audio.play()
+		//const playAudio = () => {
+  //songAndName.push(firstWord)
+				//if (songAndName.length===1){
+         //audio.play()
+        //console.log(songAndName.length)
+				//console.log(songAndName)
 
-				//console.log(songAndName.length)
-				console.log(songAndName)
-			}
-
-			}
+//}
+    songAndName.push(firstWord)
+					//	if (songAndName.length===1){
 			playAudio()
-		}
 
+	//}
+} else if (songAndName.length >1) {
+	pauseAudio()
+}
 	}
 }
+
 
 if (fragmentTest.test(parentElement)) {
 	console.log(parentElement)
@@ -298,7 +308,7 @@ clickToPlay()*/
 
 
 
-/*let cuckooSound = new Audio("bird-sounds/cuckoo-sound.mp3")
+/*let cuckooSound = new Audio("bird-sounds/cuckoo-sound.m4a")
 const playCuckoo =()=>{
 	 cuckooSound.play()
 }
