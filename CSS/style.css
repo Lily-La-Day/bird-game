@@ -1,5 +1,53 @@
 html {
 height: 100%;
+width: 100%
+}
+
+@media (max-width: 425px) {
+  .header {
+    margin-top: -2em !important;
+    display: block !important;
+    height: 2em !important;
+    padding-bottom: 0.01em !important;
+  }
+  h2 {
+    font-size: 0.75em !important;
+    padding-bottom: 0.1em !important;
+    margin-top: -18em !important;
+    text-align: center;
+    align-self: center;
+    font-family: 'Lekton';
+   text-decoration: none;
+    color: white;
+   display: inline !important;;
+  }
+  .title {
+    margin-top: -2.5em !important;
+    display: inline !important;;
+    background: pink;
+    font-size: 2em !important;
+   text-align: center !important;
+}
+  main {
+    margin-top: -9em !important;
+      background-repeat: repeat !important;
+  }
+  .bird-grid {
+    grid-template-columns: 0.01fr 0.5fr 1fr 4em 4em 1fr 0.5fr 0.01fr !important ;
+    grid-template-rows: repeat(8, 2em) !important;
+
+  }
+  [class*="bird-image"] {
+fill: grey !important;
+   max-width: 1.5em !important;
+   max-height: 1.5em !important;
+
+  }
+[id*="word"] {
+  font-size: 0.4em !important;
+s}
+
+
 }
 main {
   background-repeat: no-repeat;
@@ -13,9 +61,8 @@ background-image: url("https://i.ibb.co/8c0hYkj/cracks.jpg")
 .bird-grid {
   background-repeat: no-repeat;
   background-position: center;
-
 background-image: url("https://i.ibb.co/8c0hYkj/cracks.jpg")
-  justify-content: space-around;
+justify-content: space-around;
 display: grid;
 justify-content: center;
 align-content: center;
@@ -49,9 +96,18 @@ grid-area: 2/3;
 
 .bird-image-blackbird {
 display: grid;
-grid-area: 2/4;
+grid-area: 1/2;
+justify-self: flex-end
 
 
+
+}
+
+.bird-image-bittern {
+  display: grid;
+  grid-area: 2/7;
+  align-self: flex-end;
+  justify-self: center;
 }
 .bird-image-buzzard {
 
@@ -68,6 +124,14 @@ grid-area: 1/5;
 
 align-self: flex-end;
 
+}
+
+.bird-image-chaffinch {
+  display: grid;
+  grid-area: 4/7;
+  align-self:flex-start;
+  justify-self: flex-start;
+  height: 6em;
 }
 .bird-image-cuckoo {
 display: grid;
@@ -86,8 +150,6 @@ justify-self: center;
 display: grid;
 grid-area: 2/5;
 justify-self: flex-end;
-
-
 transform: scaleX(-1);
 }
 .bird-image-lapwing {
@@ -200,7 +262,6 @@ display: grid;
 height: 250px;
 grid-template-columns: 1fr 1fr 1fr;
 grid-template-rows: 200px 1fr;
-
 grid-template-areas:
 "title-area title-area title-area"
 "nav-one nav-two nav-three";
@@ -225,10 +286,7 @@ padding-bottom: 40px;
 }
 
 
-
-
-
-h2, a.HeaderLink1 {
+h2 {
   text-align: center;
   align-self: center;
   font-family: 'Lekton';
