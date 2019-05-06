@@ -50,6 +50,7 @@ const birdSongArray = [
 	]
 
 	let songAndName = []
+  let evaporatedFragmentArray = []
 
 const handleBirdClick = function(event) {
 	let fragmentTest = new RegExp("fragment")
@@ -94,15 +95,17 @@ songAndName.push(firstWord)
 songAndName.push(secondWord)
 console.log(songAndName)
 }
-if (songAndName.length>=2){
-	songAndName.length===0;
+if ((songAndName.length>=2)&&(songAndName[0]!==songAndName[1])){
+	songAndName.length=0;
 	document.getElementById(clickedBird).style.fill = 'black';
+	console.log('wrong')
 }
 
 if ((songAndName.length ===3) && (songAndName[2] === 'fragment'))  {
  if (songAndName[0]===songAndName[1]){
 
       document.getElementById(clickedId).style.opacity = 0;
+			evaporatedFragmentArray.push(1)
 			document.getElementById(clickedBird).style.fill = colorChange();
     	console.log(clickedBird)
 			songAndName.length=0
@@ -123,6 +126,9 @@ if ((songAndName.length ===3) && (songAndName[2] === 'fragment'))  {
 	console.log(songAndName)
 } else if (songAndName[1]==='fragment'){
 	songAndName.length = 0
+}
+if (evaporatedFragmentArray.length === 23){
+	alert('YOU WIN!')
 }
 };
 
