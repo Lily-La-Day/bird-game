@@ -1,0 +1,299 @@
+html {
+height: 100%;
+width: 100%
+}
+
+@media (max-width: 425px) {
+  .header {
+    margin-top: -2em !important;
+    display: block !important;
+    height: 2em !important;
+    padding-bottom: 0.01em !important;
+  }
+  h2 {
+    font-size: 0.75em !important;
+    padding-bottom: 0.1em !important;
+    margin-top: -18em !important;
+    text-align: center;
+    align-self: center;
+    font-family: 'Lekton';
+   text-decoration: none;
+    color: white;
+   display: inline !important;;
+  }
+  .title {
+    margin-top: -2.5em !important;
+    display: inline !important;;
+    background: pink;
+    font-size: 2em !important;
+   text-align: center !important;
+}
+  main {
+    margin-top: -9em !important;
+      background-repeat: repeat !important;
+  }
+  .bird-grid {
+    grid-template-columns: 0.01fr 0.5fr 1fr 4em 4em 1fr 0.5fr 0.01fr !important ;
+    grid-template-rows: repeat(8, 2em) !important;
+
+  }
+  [class*="bird-image"] {
+fill: grey !important;
+   max-width: 1.5em !important;
+   max-height: 1.5em !important;
+
+  }
+[id*="word"] {
+  font-size: 0.4em !important;
+s}
+
+
+}
+main {
+  background-repeat: no-repeat;
+  background-position: center;
+
+background-image: url("https://i.ibb.co/8c0hYkj/cracks.jpg")
+
+}
+
+
+.bird-grid {
+  background-repeat: no-repeat;
+  background-position: center;
+background-image: url("https://i.ibb.co/8c0hYkj/cracks.jpg")
+justify-content: space-around;
+display: grid;
+justify-content: center;
+align-content: center;
+grid-template-columns: 1fr 1fr 1fr 20em 20em 1fr 1fr 1fr;
+grid-template-rows: repeat(8, 10em);
+
+}
+
+.whole_egg{
+  display: grid;
+  grid-area: 2/4/6/6;
+}
+
+[class*="bird-image"] {
+
+ max-width: 8em;
+ max-height: 8em;
+
+}
+
+
+
+.bird-image-nightingale {
+display: grid;
+grid-area: 2/3;
+
+
+
+
+}
+
+.bird-image-blackbird {
+display: grid;
+grid-area: 1/2;
+justify-self: flex-end
+
+
+
+}
+
+.bird-image-bittern {
+  display: grid;
+  grid-area: 2/7;
+  align-self: flex-end;
+  justify-self: center;
+}
+.bird-image-buzzard {
+
+  display: grid;
+  grid-area: 1/4;
+
+
+
+}
+.bird-image-chiffchaff {
+
+display: grid;
+grid-area: 1/5;
+
+align-self: flex-end;
+
+}
+
+.bird-image-chaffinch {
+  display: grid;
+  grid-area: 4/7;
+  align-self:flex-start;
+  justify-self: flex-start;
+  height: 6em;
+}
+.bird-image-cuckoo {
+display: grid;
+  grid-area: 7/6;
+
+  transform: scaleX(-1);
+
+}
+.bird-image-curlew {
+display: grid;
+grid-area: 6/3;
+justify-self: center;
+
+}
+.bird-image-greenwoodpecker {
+display: grid;
+grid-area: 2/5;
+justify-self: flex-end;
+transform: scaleX(-1);
+}
+.bird-image-lapwing {
+display: grid;
+grid-area: 3/6;
+
+
+}
+.bird-image-littleowl {
+display: grid;
+grid-area: 3/3;
+
+justify-self: flex-end;
+
+}
+.bird-image-nightjar {
+display: grid;
+grid-area: 1/6;
+
+justify-self: flex-end;
+align-self: flex-end;
+}
+.bird-image-pheasant {
+
+display: grid;
+grid-area: 4/2;
+justify-self: flex-end;
+transform: scaleX(-1);
+
+
+
+
+}
+.bird-image-rook {
+display: grid;
+grid-area: 4/6;
+
+
+}
+.bird-image-skylark {
+display: grid;
+grid-area: 5/2;
+
+
+}
+.bird-image-sparrowhawk {
+display: grid;
+grid-area: 5/7;
+
+transform: scaleX(-1);
+}
+.bird-image-starling {
+display: grid;
+grid-area: 6/2;
+
+transform: scaleX(-1);
+
+}
+.bird-image-swift {
+display: grid;
+grid-area: 6/7;
+
+transform: scaleX(-1);
+}
+.bird-image-tawnyowl {
+display: grid;
+grid-area: 4/3;
+height: 5em;
+justify-self: flex-end;
+align-self: flex-end;
+
+
+}
+.bird-image-woodpigeon {
+display: grid;
+grid-area: 7/3;
+
+
+
+}
+.bird-image-wren {
+display: grid;
+grid-area: 7/4;
+
+align-self: flex-end;
+}
+.bird-image-yellowhammer {
+display: grid;
+grid-area: 8/5;
+
+align-self: flex-start;
+}
+
+.bird-image-marshwarbler {
+  display: grid;
+  grid-area: 6/6;
+
+  justify-self: flex-start;
+}
+
+
+
+#nightingale-word{
+  font-size: 30em;
+}
+
+
+header {
+display: grid;
+height: 250px;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 200px 1fr;
+grid-template-areas:
+"title-area title-area title-area"
+"nav-one nav-two nav-three";
+  margin: 0;
+  width: 100%;
+justify-items: center;
+padding-bottom: 40px;
+
+
+}
+
+ .title {
+  grid-area: title-area;
+  color: white;
+  font-size: 5em;
+  font-family: 'Monoton';
+  font-weight: 5;
+  letter-spacing: 0.2em;
+  word-spacing: 0.5em;
+  align-self: center;
+
+}
+
+
+h2 {
+  text-align: center;
+  align-self: center;
+  font-family: 'Lekton';
+  font-size: 1em;
+  text-decoration: none;
+  color: white;
+  grid-area: nav-two;
+  justify-self: center;
+
+};
