@@ -52,7 +52,7 @@ const handleBirdClick = function(event) {
   let birdMatch = new RegExp(firstWord)
   let soundMatch = new RegExp(secondWord)
   
-  //If song and name array is empty, so nothing else selected change bird colour and play matching bird audio
+  //If song and name array is empty (ie nothing else selected) change bird colour and play matching bird audio
   if ((songAndName.length===0) && (birdWordTest.test(parentElement))) {
     let clickedBird = firstWord + '-image'
     document.getElementById(clickedBird).style.fill = colorChange();
@@ -62,13 +62,9 @@ const handleBirdClick = function(event) {
       const playAudio = () => {
         audio.play()
       }
-      //	let birdMatch = new RegExp(justBirdWord)
       let sourceString = birdSongArray[i].src
-
       if (birdMatch.test(sourceString)) {
-        console.log(audio)
-        
-        playAudio()
+       playAudio()
         
       }
     }
